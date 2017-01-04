@@ -134,7 +134,7 @@ var CommentView = Backbone.View.extend({
 
 /* Create a new comment model using our Comment class,
  * passing the first message as an argument: */
-var comment = new Comment('This is a message');
+var comment = new Comment('This is the first message!');
 
 // Create a view, and associate it with this model:
 var commentView = new CommentView({ model: comment });
@@ -150,7 +150,7 @@ var commentView = new CommentView({ model: comment });
  */
 
 // Append the view to the page. This is why we returned html from `render`:
-// $('body').append(commentView.render());
+$('body').append(commentView.render());
 
 /* The number of votes should be 0.
  * We set that as the initial default value in the comment model.
@@ -158,7 +158,7 @@ var commentView = new CommentView({ model: comment });
  * Let's change it and see our eventlistener in action.
  * Uncomment the line below and reload the page,
  * and it should say '1' to the left of the comment. */
-// comment.upvote();
+comment.upvote();
 
 /* play with this in your console as well.
  * You can modify the comment object in the same way we just did:
